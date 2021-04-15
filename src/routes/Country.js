@@ -12,12 +12,12 @@ export default function Country() {
   useEffect(() => {
     axios
       .get(
-        `https://newsapi.org/v2/top-headlines?country=${countryCode}&apiKey=6c2ab89e51ec4998b9922147e5d70872`
+        `http://api.mediastack.com/v1/news?access_key=1f78b2225c37cd9f13f0153e98e4a08f&countries=${countryCode}`
       )
       .then(
         (response) => {
-          console.log(response.data.articles);
-          dispatch(addNews(response.data.articles));
+          console.log(response.data.data);
+          dispatch(addNews(response.data.data));
         },
         (error) => {
           console.log(error);

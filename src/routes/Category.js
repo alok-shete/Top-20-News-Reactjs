@@ -13,12 +13,12 @@ export default function Category() {
   useEffect(() => {
     axios
       .get(
-        `https://newsapi.org/v2/top-headlines?country=${countryCode}&category=${category}&apiKey=6c2ab89e51ec4998b9922147e5d70872`
+        `http://api.mediastack.com/v1/news?access_key=1f78b2225c37cd9f13f0153e98e4a08f&countries=${countryCode}&categories=${category}`
       )
       .then(
         (response) => {
-          console.log(response.data.articles);
-          dispatch(addNews(response.data.articles));
+          console.log(response);
+          dispatch(addNews(response.data.data));
         },
         (error) => {
           console.log(error);
