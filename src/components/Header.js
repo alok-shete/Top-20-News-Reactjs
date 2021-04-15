@@ -63,9 +63,9 @@ export default function Header() {
 
   return (
     <div className="container">
-      <div class="d-flex justify-content-between mb-3">
-        <div class="p-2 blog-header-logo text-dark">Top 20</div>
-        <div class="p-2">
+      <div className="d-flex justify-content-between mb-3">
+        <div className="p-2 blog-header-logo text-dark">Top 20</div>
+        <div className="p-2">
           <div className="dropleft">
             <button
               className="btn  dropdown-toggle"

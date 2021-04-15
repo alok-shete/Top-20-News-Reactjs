@@ -12,7 +12,7 @@ export default function Country() {
   useEffect(() => {
     axios
       .get(
-        `http://newsapi.org/v2/top-headlines?country=${countryCode}&apiKey=6c2ab89e51ec4998b9922147e5d70872`
+        `https://newsapi.org/v2/top-headlines?country=${countryCode}&apiKey=6c2ab89e51ec4998b9922147e5d70872`
       )
       .then(
         (response) => {
